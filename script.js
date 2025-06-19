@@ -16,7 +16,7 @@ submitBtn.addEventListener("click", (event) => {
 					reject(`Oh sorry ${nameInp.value}. You aren't old enough.`);
 				}
 			}, 4000);
-			promis.then(data => alert(data)).catch(data => alert(data));
 		})
+		promis.then(data => alert(data)).catch(data => alert(data));
 	}
 })
