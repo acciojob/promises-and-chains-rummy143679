@@ -6,7 +6,7 @@ const ageInp = document.querySelector("#age");
 submitBtn.addEventListener("click", (event) => {
 	event.preventDefault();
 	const name = nameInp.value.trim();
-	const age = parseint(ageInp.value);
+	const age = parseInt(ageInp.value);
 	if(name == "" || isNaN(age)){
 		alert("Please enter valid details")
 	}else{
