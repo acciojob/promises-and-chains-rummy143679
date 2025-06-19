@@ -5,7 +5,7 @@ const ageInp = document.querySelector("#age");
 
 submitBtn.addEventListener("click", () => {
 	if(nameInp.value.trim() == "" || ageInp.value == ""){
-		alert("Plese enter valid details")
+		alert("Please enter valid details")
 	}else{
 		const promis = new promise((resolve, reject) => {
 			setTimeout(() => {
