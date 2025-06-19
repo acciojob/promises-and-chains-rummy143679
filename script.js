@@ -5,18 +5,21 @@ const ageInp = document.querySelector("#age");
 
 submitBtn.addEventListener("click", (event) => {
 	event.preventDefault();
-	if(nameInp.value.trim() == "" || ageInp.value == ""){
+	const name = nameInp.value.trim();
+	const age = parseint(ageInp.value);
+	if(name == "" || isNaN(age)){
 		alert("Please enter valid details")
 	}else{
 		const promis = new Promise((resolve, reject) => {
 			setTimeout(() => {
 				if(ageInp.value > 18){
-					resolve(`Wellcome, ${nameInp.value}. You can vote.`);
+					resolve(`Welcome, ${nameInp.value}. You can vote.`);
 				}else{
 					reject(`Oh sorry ${nameInp.value}. You aren't old enough.`);
 				}
 			}, 4000);
 		})
-		promis.then(data => alert(data)).catch(data => alert(data));
+		promis.then(data => alert(data))
+				.catch(err => alert(err));
 	}
 })
